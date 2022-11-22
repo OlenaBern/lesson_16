@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+body{
+	/* Значення за замовченням */
+	font-family: "Lato", sans-serif;
+	color: #424551;
+	/* font-size: 16px; */
+}
+
+.wrapper{
+	position: relative;
+	overflow: hidden;
+	min-height: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main{
+	flex-grow: 1;
+}
+
+[class*="__container"] {
+	max-width: 1275px;
+	margin: 0 auto;
+	/* Відступи безпеки */
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/* ============================== */
+.questions {
+	padding-top: 80px;
+}
+.questions__container {
+	display: flex;
+	/* gap: 105px; */
+	flex-wrap: wrap;
+}
+.questions__image {
+	/* align-self: center; */
+	padding-right: 105px;
+	flex: 0 1 43.4%;
+}
+.questions__image img{
+	max-width: 100%;
+}
+.questions__body {
+	flex: 0 1 56.6%;
+	flex-wrap: wrap;
+}
+
+.body-questions__subtitle:not(:last-child) {
+	margin-bottom: 8px;
+}
+.body-questions__title:not(:last-child) {
+margin-bottom: 40px;
+}
+.form__group{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.form__label {
+	line-height: 1.6;
+	padding-bottom: 8px;
+	display: block;
+}
+.form__input {
+	border: 1px solid #D7DADD;
+	border-radius: 4px;
+	padding: 0px 16px;
+	height: 52px;
+	width: 340px;
+	color: #9A9CA5;
+}
+.form__line{
+	margin-bottom: 24px;
+}
+
+.form__area{
+	width: 100%;
+	height: 128px;
+	padding: 13px 16px;
+	border: 1px solid #D7DADD;
+	border-radius: 4px;
+	resize: vertical;
+}
+.questions__block {
+	display: flex;
+	flex-direction: row;
+	gap: 50px;
+	margin-bottom: 24px;
+}
+.block__checkbox {
+	position: relative;
+	display: flex;
+}
+.checkbox__label {
+	line-height: 1.6;
+	cursor: pointer;
+	display: inline-flex;
+	gap: 12px;
+}
+.checkbox__label::before{
+	content: "";
+	flex: 0 0 16px;
+	height: 16px;
+	width: 16px;
+	border: 1px solid #FF3F3A;
+	border-radius: 3px;
+	transform: translateY(40%);
+}
+.checkbox__input:focus + .checkbox__label::before{
+	background-color: #FF3F3A;
+}
+.checkbox__input:checked + .checkbox__label::before{
+	background: url("../img/check.svg") center / 80% no-repeat;
+	background-color: #FF3F3A;
+}
+.checkbox__input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.checkbox__text{
+	align-self: center;
+}
+.block__button {
+	flex: 0 1 50%;
+	text-align: center;
+}
+/* ===================== */
+.form__line-radio{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.title-radio{
+	padding-bottom: 15px;
+}
+.form__input--radio{
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.radio__label{
+	line-height: 1.6;
+	cursor: pointer;
+	display: inline-flex;
+	gap: 12px;
+}
+.radio__label::before{
+	content: "";
+	flex: 0 0 16px;
+	height: 16px;
+	width: 16px;
+	border: 1px solid #FF3F3A;
+	border-radius: 50%;
+	transform: translateY(40%);
+}
+.form__input--radio:checked + .radio__label::before{
+	background-color: #FF3F3A;
+}
+@media(max-width: 1231.98px){
+.questions__container{
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+}
+}
+@media(max-width: 767.98px){
+	.body-questions__title{
+		font-size: 30px;
+	}
+	.body-questions__title:not(:last-child){
+		margin-bottom: 15px;
+}
+}

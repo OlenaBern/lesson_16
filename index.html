@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 16</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header"></header>
+		<main class="page">
+			<div class="questions">
+				<div class="questions__container">
+					<div class="questions__image">
+						<img src="img/illustration.svg" alt="Illustration">
+					</div>
+					<div class="questions__body body-questions">
+						<h3 class="body-questions__subtitle subtitle">Any questions?</h3>
+						<h2 class="body-questions__title title">Drop us a line</h2>
+						<form action="https://jsonplaceholder.typicode.com/posts" method="post"
+							class="body-questions__form form">
+							<div class="form__group">
+								<div class="form__line">
+									<label for="first-name" class="form__label">First Name*</label>
+									<input type="text" id="first-name" class="form__input" required name="first-name"
+										placeholder="Your first name">
+								</div>
+								<div class="form__line">
+									<label for="last-name" class="form__label">Last Name*</label>
+									<input type="text" id="last-name" class="form__input" required name="last-name"
+										placeholder="Your last name">
+								</div>
+							</div>
+							<div class="form__group">
+								<div class="form__line">
+									<label for="email" class="form__label">Email*</label>
+									<input type="email" id="email" class="form__input" required name="email"
+										placeholder="Your working email">
+								</div>
+								<div class="form__line">
+									<label for="phone" class="form__label">Phone</label>
+									<input type="tel" id="phone" class="form__input" name="phone"
+										placeholder="Your phone number">
+								</div>
+							</div>
+							<div class="form__line">
+								<label for="message" class="form__label">Message*</label>
+								<textarea id="message" class="form__area" required name="message"
+									placeholder="Your message"></textarea>
+							</div>
+							<div class="questions__block block">
+								<div class="block__checkbox checkbox">
+									<input id="agree" type="checkbox" class="checkbox__input" required name="agree">
+									<label for="agree" class="checkbox__label"><span class="checkbox__text">I agree to receive
+											communications from Createx Online School</span></label>
+								</div>
+								<div class="block__button button">
+									<button type="submit"><span>Send message</span></button>
+								</div>
+							</div>
+							<div class="form__line-radio radio">
+								<div class="title-radio">I agree to the mailing:</div>
+								<div class="radio__line">
+									<input id="mailing-yes" type="radio" class="form__input form__input--radio" name="mailing"
+										required>
+									<label for="mailing-yes" class="form__label radio__label"><span
+											class="radio__text">Yes</span></label>
+								</div>
+								<div class="radio__line">
+									<input id="mailing-no" type="radio" class="form__input form__input--radio" name="mailing"
+										required>
+									<label for="mailing-no" class="form__label radio__label"><span
+											class="radio__text">No</span></label>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer"></footer>
+	</div>
+</body>
+
+</html>
